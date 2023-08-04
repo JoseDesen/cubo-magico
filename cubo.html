@@ -1,77 +1,173 @@
-Oi<style>
+<html>
+<head>
+<title>Cubo Magico</title>
+</head>
+<style>
+*{
+text-align:center;
+margin:0px;
+padding:0px;
+}
 #f1,#f2,#f3,#f4,#f5,#f6,#f7,#f8,#f9{
-background-color:yellow;  
-transform:skewX(-40deg);
+background-color:yellow;
+color:yellow;  
+transform: skewX(-40deg); 
+
 }
 #b1,#b2,#b3,#b4,#b5,#b6,#b7,#b8,#b9{
-background-color:red;  
+background-color:red;
+color:red;  
+
 }
 #e1,#e2,#e3,#e4,#e5,#e6,#e7,#e8,#e9{
-background-color:green;  
-  transform:skewY(-40deg);
-}
-#f1{
-margin-left:200px;
-}
-#f4{
-margin-left:120px;
-}
-#f7{
-margin-left:40px;
-}
-
-#e2{
-  margin-top:-100px;
+background-color:green;
+color:green;  
+transform: skewY(-50deg); 
+position:absolute;
 }
 input{
 width:100px;
 height:100px;
-padding:0px;
 }
-form{
-width:700px;
-height:600px;
+#f1{
+margin-left:110px;
 }
-  #e1{
-  margin-top:-50px;
-  width:300px;
-    transform:skewY(-50deg)
-  }
+#f4{
+margin-left:-59px;
+}
+#f7{
+margin-left:-227px;
+}
+#b1,#b4,#b7{
+margin-left:-311px;
+}
+#e1,#e4,#e7{
+margin-top:-50px;
+width:84px;
+}
+#e2,#e5,#e8{
+margin-left:84px;
+margin-top:-149px;
+width:84px;
+}
+#e3,#e6,#e9{
+margin-left:168px;
+margin-top:-249px;
+width:84px;
+}
+
 </style>
+<script>
+var a1="white";
+var a2="white";
+var a3="white";
+var a4="white";
+var a5="white";
+var a6="white";
+var a7="white";
+var a8="white";
+var a9="white";
 
+var c1="blue";
+var c2="blue";
+var c3="blue";
+var c4="blue";
+var c5="blue";
+var c6="blue";
+var c7="blue";
+var c8="blue";
+var c9="blue";
+
+var d1="orange";
+var d2="orange";
+var d3="orange";
+var d4="orange";
+var d5="orange";
+var d6="orange";
+var d7="orange";
+var d8="orange";
+var d9="orange";
+
+function movimento(m){
+alert('a');
+document.getElementById('b1').style.backgroundColor="red";
+var b1=document.getElementById('b1').style.backgroundColor;
+alert(b1);
+var b2="";
+var b3="red";
+var b4="red";
+var b5="red";
+var b6="red";
+var b7="red";
+var b8="red";
+var b9="red";
+
+var e1="green";
+var e2="green";
+var e3="green";
+var e4="green";
+var e5="green";
+var e6="green";
+var e7="green";
+var e8="green";
+var e9="green";
+
+var f1="yellow";
+var f2="yellow";
+var f3="yellow";
+var f4="yellow";
+var f5="yellow";
+var f6="yellow";
+var f7="yellow";
+var f8="yellow";
+var f9="yellow";
+
+	
+if(m=="RH"){
+	
+	}
+
+}
+
+</script>
+<body bgwhite="black">
 <form >
-<input type="text" id="f1" disabled>
-<input type="text" id="f2"disabled>
-<input type="text" id="f3"disabled>     
+<center>
+<input type="text" id="f1"  value="a" disabled>
+<input type="text" id="f2" value="a" disabled>
+<input type="text" id="f3" value="a" disabled>     
 <br>
-<input type="text" id="f4"disabled>
-<input type="text" id="f5"disabled>
-<input type="text" id="f6"disabled>     
+<input type="text" id="f4" value="a" disabled>
+<input type="text" id="f5" value="a" disabled>
+<input type="text" id="f6" value="a" disabled>     
 <br>
-<input type="text" id="f7"disabled>
-<input type="text" id="f8"disabled>
-<input type="text" id="f9"disabled>  
-<input type="text" id="e1"disabled>
+<input type="text" id="f7" value="a" disabled>
+<input type="text" id="f8" value="a" disabled>
+<input type="text" id="f9" value="a" disabled>
 <br>
-<input type="text" id="b1"disabled>
-<input type="text" id="b2"disabled>
-<input type="text" id="b3"disabled>  
-
-<input type="text" id="e2"disabled>
-<input type="text" id="e3"disabled>     
+<input type="text" id="b1" value="a" disabled>
+<input type="text" id="b2" value="a" disabled>
+<input type="text" id="b3" value="a" disabled>     
+<input type="text" id="e1" value="a" disabled>
+<input type="text" id="e2" value="a" disabled>
+<input type="text" id="e3" value="a" disabled>     
 <br>
-<input type="text" id="b4"disabled>
-<input type="text" id="b5"disabled>
-<input type="text" id="b6"disabled>    
-<input type="text" id="e4"disabled>
-<input type="text" id="e5"disabled>
-<input type="text" id="e6"disabled>     
+<input type="text" id="b4" value="a" disabled>
+<input type="text" id="b5" value="a" disabled>
+<input type="text" id="b6" value="a" disabled>     
+<input type="text" id="e4" value="a" disabled>
+<input type="text" id="e5" value="a" disabled>
+<input type="text" id="e6" value="a" disabled>     
 <br>
-<input type="text" id="b7"disabled>
-<input type="text" id="b8"disabled>
-<input type="text" id="b9"disabled>     
-<input type="text" id="e7"disabled>
-<input type="text" id="e8"disabled>
-<input type="text" id="e9"disabled>     
+<input type="text" id="b7" value="a" disabled>
+<input type="text" id="b8" value="a" disabled>
+<input type="text" id="b9" value="a" disabled>     
+<input type="text" id="e7" value="a" disabled>
+<input type="text" id="e8" value="a" disabled>
+<input type="text" id="e9" value="a" disabled>     
 <br>
-
+<input type="button" value="R" onclick="movimento('RH')">
+</center>
+</form>
+</body>
+</html>
