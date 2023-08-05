@@ -88,6 +88,73 @@ var d7="orange";
 var d8="orange";
 var d9="orange";
 
+function letra(){
+document.getElementById('b1').style.color=document.getElementById('b1').style.background;
+document.getElementById('b2').style.color=document.getElementById('b2').style.background;
+document.getElementById('b3').style.color=document.getElementById('b3').style.background;
+document.getElementById('b4').style.color=document.getElementById('b4').style.background;
+document.getElementById('b5').style.color=document.getElementById('b5').style.background;
+document.getElementById('b6').style.color=document.getElementById('b6').style.background;
+document.getElementById('b7').style.color=document.getElementById('b7').style.background;
+document.getElementById('b8').style.color=document.getElementById('b8').style.background;
+document.getElementById('b9').style.color=document.getElementById('b9').style.background;
+
+document.getElementById('e1').style.color=document.getElementById('e1').style.background;
+document.getElementById('e2').style.color=document.getElementById('e2').style.background;
+document.getElementById('e3').style.color=document.getElementById('e3').style.background;
+document.getElementById('e4').style.color=document.getElementById('e4').style.background;
+document.getElementById('e5').style.color=document.getElementById('e5').style.background;
+document.getElementById('e6').style.color=document.getElementById('e6').style.background;
+document.getElementById('e7').style.color=document.getElementById('e7').style.background;
+document.getElementById('e8').style.color=document.getElementById('e8').style.background;
+document.getElementById('e9').style.color=document.getElementById('e9').style.background;
+
+document.getElementById('f1').style.color=document.getElementById('f1').style.background;
+document.getElementById('f2').style.color=document.getElementById('f2').style.background;
+document.getElementById('f3').style.color=document.getElementById('f3').style.background;
+document.getElementById('f4').style.color=document.getElementById('f4').style.background;
+document.getElementById('f5').style.color=document.getElementById('f5').style.background;
+document.getElementById('f6').style.color=document.getElementById('f6').style.background;
+document.getElementById('f7').style.color=document.getElementById('f7').style.background;
+document.getElementById('f8').style.color=document.getElementById('f8').style.background;
+document.getElementById('f9').style.color=document.getElementById('f9').style.background;
+
+}
+function comecar(){
+document.getElementById('b1').style.background="red";
+document.getElementById('b2').style.background="red";
+document.getElementById('b3').style.background="red"; 
+document.getElementById('b4').style.background="red";
+document.getElementById('b5').style.background="red";
+document.getElementById('b6').style.background="red";
+document.getElementById('b7').style.background="red";
+document.getElementById('b8').style.background="red";
+document.getElementById('b9').style.background="red";
+
+document.getElementById('e1').style.background="green";
+document.getElementById('e2').style.background="green";
+document.getElementById('e3').style.background="green";
+document.getElementById('e4').style.background="green";
+document.getElementById('e5').style.background="green";
+document.getElementById('e6').style.background="green";
+document.getElementById('e7').style.background="green";
+document.getElementById('e8').style.background="green";
+document.getElementById('e9').style.background="green";
+
+document.getElementById('f1').style.background="yellow";
+document.getElementById('f2').style.background="yellow";
+document.getElementById('f3').style.background="yellow";
+document.getElementById('f4').style.background="yellow";
+document.getElementById('f5').style.background="yellow";
+document.getElementById('f6').style.background="yellow";
+document.getElementById('f7').style.background="yellow";
+document.getElementById('f8').style.background="yellow";
+document.getElementById('f9').style.background="yellow";
+
+letra();
+
+}
+	
 function movimento(m){
 document.getElementById('b1').style.backgroundColor="red";
 var b1=document.getElementById('b1').style.backgroundColor;
@@ -155,10 +222,13 @@ document.getElementById('e6').style.background=document.getElementById('e2').sty
 document.getElementById('e2').style.background=y;
 }
 
+
+
+letra();
 }
 
 </script>
-<body bgwhite="black">
+<body  onload="comecar()">
 <form >
 <center>
 <input type="text" id="f1"  value="a" disabled>
