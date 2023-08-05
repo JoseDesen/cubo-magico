@@ -89,7 +89,6 @@ var d8="orange";
 var d9="orange";
 
 function movimento(m){
-alert('a');
 document.getElementById('b1').style.backgroundColor="red";
 var b1=document.getElementById('b1').style.backgroundColor;
 alert(b1);
@@ -123,9 +122,38 @@ var f8="yellow";
 var f9="yellow";
 
 	
-if(m=="RH"){
-	
-	}
+
+If(m=="RH"){
+y=document.getElementById('b3').style.background;
+document.getElementById('b3').style.background=a3;
+a3=d7;
+d7=document.getElementById('f3').style.background;
+document.getElementById('f3').style.background=y;
+
+y=document.getElementById('b6').style.background;
+document.getElementById('b6').style.background=a6;
+a6=d6;
+d6=document.getElementById('f6').style.background;
+document.getElementById('f6').style.background=y;
+
+y=document.getElementById('b9').style.background;
+document.getElementById('b9').style.background=a9;
+a9=d3;
+d3=document.getElementById('f9').style.background;
+document.getElementById('f9').style.background=y;
+
+y=document.getElementById('e1').style.background;
+document.getElementById('e1').style.background=document.getElementById('e7').style.background;
+document.getElementById('e7').style.background=document.getElementById('e9').style.background;
+document.getElementById('e9').style.background=document.getElementById('e3').style.background
+document.getElementById('e3').style.background=y;
+
+y=document.getElementById('e4').style.background;
+document.getElementById('e4').style.background=document.getElementById('e8').style.background;
+document.getElementById('e8').style.background=document.getElementById('e6').style.background;
+document.getElementById('e6').style.background=document.getElementById('e2').style.background
+document.getElementById('e2').style.background=y;
+}
 
 }
 
