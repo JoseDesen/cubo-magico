@@ -166,14 +166,14 @@ document.getElementById('f3').style.background=y;
 
 y=document.getElementById('b6').style.background;
 document.getElementById('b6').style.background=a6;
-a6=d6;
-d6=document.getElementById('f6').style.background;
+a6=d4;
+d4=document.getElementById('f6').style.background;
 document.getElementById('f6').style.background=y;
 
 y=document.getElementById('b9').style.background;
 document.getElementById('b9').style.background=a9;
-a9=d3;
-d3=document.getElementById('f9').style.background;
+a9=d1;
+d1=document.getElementById('f9').style.background;
 document.getElementById('f9').style.background=y;
 
 y=document.getElementById('e1').style.background;
@@ -188,7 +188,38 @@ document.getElementById('e8').style.background=document.getElementById('e6').sty
 document.getElementById('e6').style.background=document.getElementById('e2').style.background
 document.getElementById('e2').style.background=y;
 }
+if(m=="UH"){
 
+y=document.getElementById('b1').style.background;
+document.getElementById('b1').style.background=document.getElementById('e1').style.background;
+document.getElementById('e1').style.background=d1;
+d1=c1;
+c1=y;
+
+y=document.getElementById('b2').style.background;
+document.getElementById('b2').style.background=document.getElementById('e2').style.background;
+document.getElementById('e2').style.background=d2;
+d2=c2;
+c2=y;
+
+y=document.getElementById('b3').style.background;
+document.getElementById('b3').style.background=document.getElementById('e3').style.background;
+document.getElementById('e3').style.background=d3;
+d3=c3;
+c3=y;
+
+y=document.getElementById('f1').style.background;
+document.getElementById('f1').style.background=document.getElementById('f7').style.background;
+document.getElementById('f7').style.background=document.getElementById('f9').style.background;
+document.getElementById('f9').style.background=document.getElementById('f3').style.background;
+document.getElementById('f3').style.background=y;
+
+y=document.getElementById('f4').style.background;
+document.getElementById('f4').style.background=document.getElementById('f8').style.background;
+document.getElementById('f8').style.background=document.getElementById('f6').style.background;
+document.getElementById('f6').style.background=document.getElementById('f2').style.background;
+document.getElementById('f2').style.background=y;
+}
 
 
 letra();
@@ -232,6 +263,7 @@ letra();
 <input type="text" id="e9" value="a" disabled>     
 <br>
 <input type="button" value="R" onclick="movimento('RH')">
+<input type="button" value="U" onclick="movimento('UH')">
 </center>
 </form>
 </body>
