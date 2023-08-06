@@ -287,6 +287,120 @@ c3=a1;
 a1=y;
 }
 
+if(m=="DH"){
+
+y=document.getElementById('b7').style.background;
+document.getElementById('b7').style.background=c7;
+c7=d7;
+d7=document.getElementById('e7').style.background;
+document.getElementById('e7').style.background=y;
+
+y=document.getElementById('b8').style.background;
+document.getElementById('b8').style.background=c8;
+c8=d8;
+d8=document.getElementById('e8').style.background;
+document.getElementById('e8').style.background=y;
+
+y=document.getElementById('b9').style.background;
+document.getElementById('b9').style.background=c9;
+c9=d9;
+d9=document.getElementById('e9').style.background;
+document.getElementById('e9').style.background=y;
+
+y=a1;
+a1=a7;
+a7=a9;
+a9=a3;
+a3=y;
+
+y=a2;
+a2=a4;
+a4=a8;
+a8=a6:
+a6=y;
+
+}
+
+if(m=="BH"){
+
+y=document.getElementById('f1').style.background;
+document.getElementById('f1').style.background=document.getElementById('e3').style.background;
+document.getElementById('e3').style.background=a9;
+a9=c7;
+c7=y;
+
+y=document.getElementById('f2').style.background
+document.getElementById('f2').style.background=document.getElementById('e6').style.background;
+document.getElementById('e6').style.background=a8;
+a8=c4;
+c4=y;
+
+y=document.getElementById('f3').style.background;
+document.getElementById('f3').style.background=document.getElementById('e9').style.background;
+document.getElementById('e9').style.background=a7;
+a7=c1;
+c1=y;
+
+y=d1;
+d1=d7;
+d7=d9;
+d9=d3;
+d3=y;
+
+y=d2;
+d2=d4;
+d4=d8;
+d8=d6;
+d6=y;
+
+}
+
+if(m=="MH"){
+
+y=document.getElementById('b2').style.background;
+document.getElementById('b2').style.background=a2;
+a2=d8;
+d8=f2;
+f2=y;
+
+y=document.getElementById('b5').style.background;
+document.getElementById('b5').style.background=a5;
+a5=d5;
+d5=document.getElementById('f5').style.background;
+document.getElementById('f5').style.background=y;
+
+y=document.getElementById('b8').style.background;
+document.getElementById('b8').style.background=a8;
+a8=d2;
+d2=document.getElementById('f8').style.background;
+document.getElementById('f8').style.background=y;
+
+}
+
+
+if(m=="mxH"){
+
+y=document.getElementById('b4').style.background;
+document.getElementById('b4').style.background=document.getElementById('e4').style.background;
+document.getElementById('e4').style.background=d4;
+d4=c4;
+c4=y;
+
+y=document.getElementById('b5').style.background;
+document.getElementById('b5').style.background=document.getElementById('e5').style.background;
+document.getElementById('e5').style.background=d5;
+d5=c5;
+c5=y;
+
+y=document.getElementById('b6').style.background;
+document.getElementById('b6').style.background=document.getElementById('e6').style.background;
+document.getElementById('e6').style.background=d6;
+d6=c6;
+c6=y;
+}
+
+	
+
 if(m=="UA"){
 movimento('UH');
 movimento('UH');
@@ -310,6 +424,49 @@ movimento('FH');
 movimento('FH');
 movimento('FH');
 }
+
+if(m=="DA"){
+movimento('DH');
+movimento('DH');
+movimento('DH');
+}
+
+if(m=="BA"){
+movimento('BH');
+movimento('BH');
+movimento('BH');
+}
+
+if(m=="MA"){
+movimento('MH');
+movimento('MH');
+movimento('MH');
+}
+
+if(m=="XH"){
+movimento('UH');
+movimento('mxH');
+movimento('DA');
+}
+
+if(m=="XA"){
+movimento('XH');
+movimento('XH');
+movimento('XH');
+}
+
+if(m=="YH"){
+movimento('RH');
+movimento('MH');
+movimento('LA');
+}
+
+if(m=="YA"){
+movimento('YH');
+movimento('YH');
+movimento('YH');
+}
+
 
 letra();
 }
@@ -355,11 +512,21 @@ letra();
 <input type="button" value="U" onclick="movimento('UH')">
 <input type="button" value="L" onclick="movimento('LH')">
 <input type="button" value="F" onclick="movimento('FH')">
+<input type="button" value="D" onclick="movimento('DH')">
+<input type="button" value="B" onclick="movimento('BH')">
+<input type="button" value="M" onclick="movimento('MH')">
+<input type="button" value="x" onclick="movimento('XH')">
+<input type="button" value="y" onclick="movimento('YH')">
 <br>
 <input type="button" value="R'" onclick="movimento('RA')">
 <input type="button" value="U'" onclick="movimento('UA')">
 <input type="button" value="L'" onclick="movimento('LA')">
 <input type="button" value="F'" onclick="movimento('FA')">
+<input type="button" value="D'" onclick="movimento('DA')">
+<input type="button" value="B'" onclick="movimento('BA')">
+<input type="button" value="M'" onclick="movimento('MA')">
+<input type="button" value="x'" onclick="movimento('XA')">
+<input type="button" value="y'" onclick="movimento('YA')">
 </center>
 </form>
 </body>
