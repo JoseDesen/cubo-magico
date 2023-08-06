@@ -220,7 +220,18 @@ document.getElementById('f8').style.background=document.getElementById('f6').sty
 document.getElementById('f6').style.background=document.getElementById('f2').style.background;
 document.getElementById('f2').style.background=y;
 }
+if(m=="UA"){
+movimento('UH');
+movimento('UH');
+movimento('UH');
+}
 
+if(m=="RA"){
+movimento('RH');
+movimento('RH');
+movimento('RH');
+}
+	
 
 letra();
 }
@@ -264,6 +275,9 @@ letra();
 <br>
 <input type="button" value="R" onclick="movimento('RH')">
 <input type="button" value="U" onclick="movimento('UH')">
+<br>
+<input type="button" value="R'" onclick="movimento('RA')">
+<input type="button" value="U'" onclick="movimento('UA')">
 </center>
 </form>
 </body>
