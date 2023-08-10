@@ -1,6 +1,7 @@
 <html>
-<head>
-<title>Cubo Magico</title>
+<head>	
+	<meta charset="utf-8"/>
+	<title>Cubo Magico</title>
 </head>
 <style>
 *{
@@ -55,7 +56,10 @@ margin-left:168px;
 margin-top:-249px;
 width:84px;
 }
-
+#comecar{
+visibility: hidden;
+}
+	
 </style>
 <script>
 var a1="white";
@@ -518,6 +522,62 @@ movimento("BA");
 }
 
 
+var seg=0;
+var min=0;
+var MeuTempo;
+var TempoInspecionar;
+function inspecionar(){
+	
+	document.getElementById('embaralhar').style.visibility="hidden";
+	document.getElementById('comecar').style.visibility="visible";
+	
+	seg=16;
+	TempoInspecinar = setInterval(function() {
+	seg--;	
+	var c=document.getElementById('inspecionar');
+	c.innerHTML="<div id='inspecionar'>Tempo de inspeção:<br>"+seg+"</div>";
+		if(seg==0){
+		comecarTempo();
+		}		
+	}, 1000);
+}
+
+function comecarTempo(){
+clearInterval(TempoInspecinar);
+seg=-1;
+min=0;
+MeuTempo = setInterval(function() {
+					seg++;	
+					if(seg<10){
+						if(min<10){
+						var c=document.getElementById('crono');
+						c.innerHTML="<div id='crono'>Tempo:<br>0"+min+":0"+seg+"</div>";
+						}
+					}else if(seg>=10 && seg<60){
+						if(min<10){
+						var c=document.getElementById('crono');
+						c.innerHTML="<div id='crono'>Tempo:<br>0"+min+":"+seg+"</div>";
+						}
+					}else if(seg>=60){
+						seg=-1;
+						min=min+1;
+					}
+					if(seg<10){
+						if(min>=10 && min<60){
+						var c=document.getElementById('crono');
+						c.innerHTML="<div id='crono'>Tempo:<br>"+min+":0"+seg+"</div>";
+						}
+					}else if(seg>=10 && seg<60){
+						if(min>=10 && min<60){
+						var c=document.getElementById('crono');
+						c.innerHTML="<div id='crono'>Tempo:<br>"+min+":"+seg+"</div>";
+						}
+					}
+					}, 1000);
+				
+}
+
+
 </script>
 <body  onload="comecar()">
 <form >
@@ -555,8 +615,10 @@ movimento("BA");
 <input type="text" id="e8" value="a" disabled>
 <input type="text" id="e9" value="a" disabled>     
 <br>
-
-<input type="button" value="Embaralhar" onclick="embaralhar()">
+<div id='inspecionar'></div>
+<div id='crono'></div>
+<input type="button" id="embaralhar" value="Embaralhar" onclick="inspecionar()">
+<input type="button" id="comecar" value="começar" onclick="comecarTempo()">
 <br>
 <input type="button" value="R" onclick="movimento('RH')">
 <input type="button" value="U" onclick="movimento('UH')">
