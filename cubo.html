@@ -59,7 +59,10 @@ width:84px;
 #comecar{
 visibility: hidden;
 }
-	
+
+#tempo{
+margin-left:250px;
+}
 </style>
 <script>
 var a1="white";
@@ -476,7 +479,7 @@ letra();
 }
 
 function embaralhar(){
-
+inspecionar();
 for(var a=1;a<=20;a++){
 var n=Math.floor(Math.random() * 12)+1 ;
 
@@ -616,10 +619,13 @@ MeuTempo = setInterval(function() {
 <input type="text" id="e8" value="a" disabled>
 <input type="text" id="e9" value="a" disabled>     
 <br>
+<div id="tempo">
 <div id='inspecionar'></div>
 <div id='crono'></div>
-<input type="button" id="embaralhar" value="Embaralhar" onclick="inspecionar()">
 <input type="button" id="comecar" value="começar" onclick="comecarTempo()">
+</div>
+<input type="button" id="embaralhar" value="Embaralhar" onclick="embaralhar()">
+
 <br>
 <input type="button" value="R" onclick="movimento('RH')">
 <input type="button" value="U" onclick="movimento('UH')">
