@@ -76,6 +76,18 @@ function inspecionar(){
 	document.getElementById('bagunca').style.visibility="hidden";
 	document.getElementById('comecar').style.visibility="visible";
 	document.getElementById('rh').disabled=true;
+	document.getElementById('uh').disabled=true;
+	document.getElementById('fh').disabled=true;
+	document.getElementById('lh').disabled=true;
+	document.getElementById('bh').disabled=true;
+	document.getElementById('dh').disabled=true;
+	
+	document.getElementById('ra').disabled=true;
+	document.getElementById('fa').disabled=true;
+	document.getElementById('ua').disabled=true;
+	document.getElementById('la').disabled=true;
+	document.getElementById('ba').disabled=true;
+	document.getElementById('da').disabled=true;
 	seg=16;
 	TempoInspecionar = setInterval(function() {
 	seg--;	
@@ -92,6 +104,18 @@ function comecarTempo(){
 document.getElementById('comecar').style.visibility="hidden";
 clearInterval(TempoInspecionar);
 document.getElementById('rh').disabled=false;
+document.getElementById('uh').disabled=false;
+document.getElementById('fh').disabled=false;
+document.getElementById('lh').disabled=false;
+document.getElementById('bh').disabled=false;
+document.getElementById('dh').disabled=false;
+	
+document.getElementById('ra').disabled=false;
+document.getElementById('fa').disabled=false;
+document.getElementById('ua').disabled=false;
+document.getElementById('la').disabled=false;
+document.getElementById('ba').disabled=false;
+document.getElementById('da').disabled=false;
 seg=-1;
 min=0;
 MeuTempo = setInterval(function() {
@@ -634,7 +658,7 @@ inspecionar();
 <input type="button" id="bagunca" value="Embaralhar" onclick="embaralhar()">
 
 <br>
-<input type="button" id="rh"  value="R" onclick="movimento('RH')" disabled="false">
+<input type="button" id="rh"  value="R" onclick="movimento('RH')" >
 <input type="button" id="uh"  value="U" onclick="movimento('UH')">
 <input type="button" id="lh"   value="L" onclick="movimento('LH')">
 <input type="button" id="fh"  value="F" onclick="movimento('FH')">
