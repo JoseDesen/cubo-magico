@@ -75,7 +75,7 @@ function inspecionar(){
 	
 	document.getElementById('bagunca').style.visibility="hidden";
 	document.getElementById('comecar').style.visibility="visible";
-	document.f.rh.disabled="true";
+	document.getElementById('rh').disabled=true;
 	seg=16;
 	TempoInspecionar = setInterval(function() {
 	seg--;	
@@ -91,7 +91,7 @@ function inspecionar(){
 function comecarTempo(){
 document.getElementById('comecar').style.visibility="hidden";
 clearInterval(TempoInspecionar);
-document.f.rh.disabled="false";
+document.getElementById('rh').disabled=false;
 seg=-1;
 min=0;
 MeuTempo = setInterval(function() {
@@ -634,22 +634,22 @@ inspecionar();
 <input type="button" id="bagunca" value="Embaralhar" onclick="embaralhar()">
 
 <br>
-<input type="button" name="rh"  value="R" onclick="movimento('RH')" disabled="false">
-<input type="button" name="uh"  value="U" onclick="movimento('UH')">
-<input type="button" name="lh"   value="L" onclick="movimento('LH')">
-<input type="button" name="fh"  value="F" onclick="movimento('FH')">
-<input type="button" name="dh"  value="D" onclick="movimento('DH')">
-<input type="button" name="bh"  value="B" onclick="movimento('BH')">
-<input type="button" name="mh"  value="M" onclick="movimento('MH')">
+<input type="button" id="rh"  value="R" onclick="movimento('RH')" disabled="false">
+<input type="button" id="uh"  value="U" onclick="movimento('UH')">
+<input type="button" id="lh"   value="L" onclick="movimento('LH')">
+<input type="button" id="fh"  value="F" onclick="movimento('FH')">
+<input type="button" id="dh"  value="D" onclick="movimento('DH')">
+<input type="button" id="bh"  value="B" onclick="movimento('BH')">
+<input type="button" id="mh"  value="M" onclick="movimento('MH')">
 
 <br>
-<input type="button" name="ra"  value="R'" onclick="movimento('RA')">
-<input type="button" name="ua" value="U'" onclick="movimento('UA')">
-<input type="button" name="la" value="L'" onclick="movimento('LA')">
-<input type="button" name="fa" value="F'" onclick="movimento('FA')">
-<input type="button" name="da" value="D'" onclick="movimento('DA')">
-<input type="button" name="ba" value="B'" onclick="movimento('BA')">
-<input type="button" name="ma" value="M'" onclick="movimento('MA')">
+<input type="button" id="ra"  value="R'" onclick="movimento('RA')">
+<input type="button" id="ua" value="U'" onclick="movimento('UA')">
+<input type="button" id="la" value="L'" onclick="movimento('LA')">
+<input type="button" id="fa" value="F'" onclick="movimento('FA')">
+<input type="button" id="da" value="D'" onclick="movimento('DA')">
+<input type="button" id="ba" value="B'" onclick="movimento('BA')">
+<input type="button" id="ma" value="M'" onclick="movimento('MA')">
 <br>
 <input type="button" value="x" onclick="movimento('YH')">
 <input type="button" value="y" onclick="movimento('XH')">
