@@ -67,6 +67,66 @@ position:absolute;
 }
 </style>
 <script>
+var seg=0;
+var min=0;
+var MeuTempo;
+var TempoInspecionar;
+function inspecionar(){
+	
+	document.getElementById('embaralhar').style.visibility="hidden";
+	document.getElementById('comecar').style.visibility="visible";
+	
+	seg=16;
+	TempoInspecionar = setInterval(function() {
+	seg--;	
+	var c=document.getElementById('inspecionar');
+	c.innerHTML="<div id='inspecionar'>Tempo de inspeção:<br>"+seg+"</div>";
+		if(seg==0){
+		comecarTempo();
+		clearInterval(TempoInspecionar);
+		}		
+	}, 1000);
+}
+
+function comecarTempo(){
+document.getElementById('comecar').style.visibility="hidden";
+clearInterval(TempoInspecionar);
+seg=-1;
+min=0;
+MeuTempo = setInterval(function() {
+					seg++;	
+					if(seg<10){
+						if(min<10){
+						var c=document.getElementById('crono');
+						c.innerHTML="<div id='crono'>Tempo:<br>0"+min+":0"+seg+"</div>";
+						}
+					}else if(seg>=10 && seg<60){
+						if(min<10){
+						var c=document.getElementById('crono');
+						c.innerHTML="<div id='crono'>Tempo:<br>0"+min+":"+seg+"</div>";
+						}
+					}else if(seg>=60){
+						seg=-1;
+						min=min+1;
+					}
+					if(seg<10){
+						if(min>=10 && min<60){
+						var c=document.getElementById('crono');
+						c.innerHTML="<div id='crono'>Tempo:<br>"+min+":0"+seg+"</div>";
+						}
+					}else if(seg>=10 && seg<60){
+						if(min>=10 && min<60){
+						var c=document.getElementById('crono');
+						c.innerHTML="<div id='crono'>Tempo:<br>"+min+":"+seg+"</div>";
+						}
+					}
+					}, 1000);
+				
+}
+
+
+
+
 var a1="white";
 var a2="white";
 var a3="white";
